@@ -1,0 +1,27 @@
+$light: (
+  bg: #f3f4f9, surface: #ffffff, text: #1d2130, muted: #505a70,
+  border: #8a93a8, line: #e1e4ee, hover: #eef0fb,
+  primary: #4338ca, on-primary: #ffffff, danger: #b42318, focus: #4338ca
+);
+
+$dark: (
+  bg: #10121a, surface: #1a1e2c, text: #eceef6, muted: #a9b0c6,
+  border: #6d7690, line: #2a3043, hover: #252a3c,
+  primary: #a5b4fc, on-primary: #10121a, danger: #fda29b, focus: #a5b4fc
+);
+
+@mixin theme($tokens, $scheme) {
+  color-scheme: $scheme;
+  @each $name, $value in $tokens {
+    --color-#{$name}: #{$value};
+  }
+}
+
+:root,
+[data-theme='light'] {
+  @include theme($light, light);
+}
+
+[data-theme='dark'] {
+  @include theme($dark, dark);
+}

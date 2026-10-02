@@ -1,14 +1,13 @@
 {
-  "name": "todo-list-tailwind",
+  "name": "todo-list",
   "version": "1.0.0",
   "private": true,
-  "description": "To-Do List: Tailwind CSS + vanilla JS, доступный интерфейс",
+  "description": "To-Do List: Sass + vanilla JS, доступный интерфейс",
   "scripts": {
-    "tailwind:dev": "tailwindcss -i src/input.css -o ./dist/css/main.css --watch",
-    "build": "tailwindcss -i src/input.css -o ./dist/css/main.css --minify"
+    "sass:dev": "sass --watch scss/main.scss:dist/css/main.css",
+    "build": "sass scss/main.scss dist/css/main.css --style=compressed"
   },
   "devDependencies": {
-    "@tailwindcss/cli": "^4.3.3",
-    "tailwindcss": "^4.3.3"
+    "sass": "^1.105.1"
   }
 }

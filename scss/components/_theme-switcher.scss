@@ -1,0 +1,30 @@
+@use '../utils/index' as *;
+
+.theme-switcher {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: $tap-size;
+  height: $tap-size;
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--color-hover);
+  }
+
+  &__icon--sun {
+    display: none;
+  }
+
+  [data-theme='dark'] &__icon--sun {
+    display: block;
+  }
+
+  [data-theme='dark'] &__icon--moon {
+    display: none;
+  }
+}
