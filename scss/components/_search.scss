@@ -1,0 +1,9 @@
+@use '../utils/index' as *;
+
+.search {
+  flex: 1;
+
+  &__input {
+    @include field;
+  }
+}

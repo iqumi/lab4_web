@@ -1,0 +1,13 @@
+{
+  "name": "todo-list",
+  "version": "1.0.0",
+  "private": true,
+  "description": "To-Do List: Sass + vanilla JS, доступный интерфейс",
+  "scripts": {
+    "sass:dev": "sass --watch scss/main.scss:dist/css/main.css",
+    "build": "sass scss/main.scss dist/css/main.css --style=compressed"
+  },
+  "devDependencies": {
+    "sass": "^1.105.1"
+  }
+}

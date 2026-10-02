@@ -1,0 +1,40 @@
+@use '../utils/index' as *;
+
+.app {
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 4rem;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  &__title {
+    font-size: 1.75rem;
+    line-height: 1.2;
+
+    @include respond-up(sm) {
+      font-size: 2.25rem;
+    }
+  }
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+
+  @include respond-up(sm) {
+    flex-direction: row;
+  }
+}
+
+.empty {
+  padding: 2rem 1rem;
+  text-align: center;
+  color: var(--color-muted);
+}
